@@ -10,7 +10,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 echo 'Cloning the repository...'
-                git branch: 'main', url: 'https://github.com/vinaydixit83/Core9.0_Emp.git'
+                git branch: 'main', url: 'https://github.com/vinaydixit83/testapp.git'
             }
         }
 
