@@ -16,7 +16,7 @@ pipeline {
 
 stage('Restore packages') {
   steps {
-    bat "C:\\Users\\vinay\\.jenkins\\workspace\\testappDotnet\\sampleapi.sln"
+    bat "nuget restore sampleapi.sln"
   }
 }
 
