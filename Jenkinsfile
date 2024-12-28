@@ -24,7 +24,9 @@ stage('Restore packages') {
          stage('Build') {
             steps {
                 echo 'Building the application...'
-                bat 'C:\\Program Files\\dotnet\\dotnet.exe" build --configuration Release'
+                bat '"C:\\Program Files\\dotnet\\dotnet.exe" build --configuration Release'
+
+                
             }
         }
 
