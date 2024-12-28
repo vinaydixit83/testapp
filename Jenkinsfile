@@ -14,12 +14,12 @@ pipeline {
             }
         }
 
-        //stage('Restore Dependencies') {
-            //steps {
-             //   echo 'Restoring dependencies...'
-           // bat '"C:\\Program Files\\dotnet\\dotnet.exe" restore'
-            //}
-       // }
+        stage('Restore Dependencies') {
+            steps {
+                echo 'Restoring dependencies...'
+            bat 'cd "C:\\Program Files\\dotnet\\dotnet.exe" restore'
+            }
+       }
 
          stage('Build') {
             steps {
