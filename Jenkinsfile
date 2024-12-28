@@ -16,8 +16,7 @@ pipeline {
 
 stage('Restore packages') {
   steps {
-      echo 'Restore packages...'
-    bat "dotnet restore C:\\Users\\vinay\\source\\repos\\sampleapi\\sampleapi.sln"
+    bat "C:\\Users\\vinay\\.jenkins\\workspace\\testappDotnet\\sampleapi.sln"
   }
 }
 
