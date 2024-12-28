@@ -14,13 +14,11 @@ pipeline {
             }
         }
 
-stage('Restore Dependencies') {
-    steps {
-        script {
-        echo 'Restoring dependencies...'
-        bat '"C:\\Windows\\System32\\cmd.exe" /c "cd C:\\Users\\vinay\\source\\repos\\sampleapi && C:\\Program Files\\dotnet\\dotnet.exe restore"'
-    }
-    }
+stage('Restore packages') {
+  steps {
+      echo 'Restore packages...'
+    bat "dotnet restore C:\\Users\\vinay\\source\\repos\\sampleapi\\sampleapi.sln"
+  }
 }
 
 
