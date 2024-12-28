@@ -17,7 +17,7 @@ pipeline {
         stage('Restore Dependencies') {
             steps {
                 echo 'Restoring dependencies...'
-                   bat '"C:\\Windows\\System32\\cmd.exe" /c "C:\\Program Files\\dotnet\\dotnet.exe" restore'
+                   bat '''cd C:\\Users\\vinay\\source\\repos\\sampleapi "C:\\Program Files\\dotnet\\dotnet.exe" restore'''
             }
        }
 
