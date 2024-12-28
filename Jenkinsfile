@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_HOME = "C:\\Program Files\\dotnet" // Adjust the path for .NET SDK on your local Jenkins server
-        PATH = "C:\\Users\\vinay\\source\\repos\\sampleapi\\Publish"
+        DOTNET_HOME = "C:\\Program Files\\dotnet" // Path to .NET SDK
+         PATH = "${DOTNET_HOME};${env.PATH}"
     }
 
     stages {
@@ -16,7 +16,7 @@ pipeline {
 
 stage('Restore packages') {
   steps {
-    bat "nuget restore sampleapi.sln"
+   bat 'dotnet restore'
   }
 }
 
