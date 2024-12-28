@@ -14,12 +14,13 @@ pipeline {
             }
         }
 
-        stage('Restore Dependencies') {
-            steps {
-                echo 'Restoring dependencies...'
-                   bat '''cd C:\\Users\\vinay\\source\\repos\\sampleapi "C:\\Program Files\\dotnet\\dotnet.exe" restore'''
-            }
-       }
+stage('Restore Dependencies') {
+    steps {
+        echo 'Restoring dependencies...'
+        bat '"C:\\Windows\\System32\\cmd.exe" /c "cd C:\\Users\\vinay\\source\\repos\\sampleapi && C:\\Program Files\\dotnet\\dotnet.exe restore"'
+    }
+}
+
 
          stage('Build') {
             steps {
