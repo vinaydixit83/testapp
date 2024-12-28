@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOTNET_HOME = "C:\\Program Files\\dotnet" // Adjust the path for .NET SDK on your local Jenkins server
-        PATH = "D:\\Workspace\\EmpManagementV1\\Publish"
+        PATH = "C:\\Users\\vinay\\source\\repos\\sampleapi\\Publish"
     }
 
     stages {
@@ -31,7 +31,7 @@ pipeline {
          stage('publish') {
             steps {
                 script {
-                    bat '"%DOTNET_HOME%\\dotnet.exe" publish --configuration Release --output D:\\Workspace\\EmpManagementV1\\Publish'
+                    bat '"%DOTNET_HOME%\\dotnet.exe" publish --configuration Release --output C:\\Users\\vinay\\source\\repos\\sampleapi\\Publish'
                 }
                 //echo 'Building the application...'
             }
@@ -50,7 +50,7 @@ pipeline {
                 bat 'dotnet publish -c Release -o publish'
 
                 echo 'Starting the application on localhost...'
-                bat 'start cmd /c dotnet publish\\EmployeeManagement.dll'
+                bat 'start cmd /c dotnet publish\\sampleapi.dll'
             }
         }
     }
